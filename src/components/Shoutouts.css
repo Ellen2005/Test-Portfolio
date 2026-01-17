@@ -1,0 +1,120 @@
+.shoutouts-section {
+  background: linear-gradient(180deg, var(--black-primary) 0%, var(--black-secondary) 100%);
+  padding: 100px 20px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-gray-dark);
+  margin-bottom: 60px;
+  font-weight: 300;
+}
+
+.shoutouts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.shoutout-card {
+  background-color: var(--black-tertiary);
+  border: 2px solid transparent;
+  border-radius: 15px;
+  padding: 30px;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.shoutout-card:hover {
+  border-color: var(--gold-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.2);
+}
+
+.quote-icon {
+  font-size: 4rem;
+  color: var(--gold-primary);
+  opacity: 0.3;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.shoutout-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-gray);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+}
+
+.shoutout-rating {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 5px;
+}
+
+.star {
+  color: var(--gold-primary);
+  font-size: 1.2rem;
+}
+
+.shoutout-author {
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+  padding-top: 20px;
+  margin-top: auto;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.author-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+  margin: 0;
+}
+
+.author-role {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+.author-company {
+  font-size: 0.9rem;
+  color: var(--text-gray-dark);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .shoutouts-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .shoutout-card {
+    padding: 25px;
+  }
+
+  .quote-icon {
+    font-size: 3rem;
+    top: 5px;
+    left: 15px;
+  }
+
+  .shoutout-text {
+    font-size: 1rem;
+  }
+}
